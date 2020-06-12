@@ -2,7 +2,7 @@ class Musician:
     """
     Super class Musician
 
-    Arguments: 
+    Arguments: Instrument, Solo
 
     """
     def __init__(self, instrument, solo):
@@ -25,7 +25,7 @@ class Musician:
 
 class Band(Musician):
     """
-    [summary]
+    This is the Band sub-Class. A Band is made up of Guitarists, Bassists, Drummers.
 
     Args:
         Musician ([type]): [description]
@@ -44,7 +44,7 @@ class Band(Musician):
     def play_solos(self):
         for member in self.members:
             member.play_solo()
-
+        
 class Guitarist(Musician):
     def __repr__(self):
         return {'Instrument':{self.instrument}, 'Solo':{self.solo}, }
@@ -59,7 +59,7 @@ class Guitarist(Musician):
     def get_instrument(self):
         return self.instrument
 
-class Bassist(Musician):  
+class Bassist(Musician):
     def __repr__(self):
             return {'Instrument':{self.instrument}, 'Solo':{self.solo}, }
 
@@ -89,14 +89,16 @@ class Drummer(Musician):
         return self.instrument
 
 
-musician1 = Guitarist('guitar', 'we are the champions')
-musician2 = Drummer('Drum', 'YES')
-musician3 = Bassist('Bass', 'NO')
+musician1 = Guitarist('guitar', 'We are the champions')
+musician2 = Drummer('Drum', 'Somebody to love')
+musician3 = Bassist('Bass', 'We will rock you')
 queen = Band('Queen', [musician1, musician2, musician3])
 queen.play_solos()
 
-musician1 = Guitarist('guitar', 'sweet child of mine')
-musician2 = Drummer('Drum', 'November Rain')
-musician3 = Bassist('Bass', 'YES and No')
-guns_n_roses= Band('Guns n Roses', [musician1, musician2, musician3])
+
+musician4 = Guitarist('guitar', 'Sweet child of mine')
+musician5 = Drummer('Drum', 'November Rain')
+musician6 = Bassist('Bass', 'Paradise City')
+guns_n_roses= Band('Guns n Roses', [musician4, musician5, musician6])
 guns_n_roses.play_solos()
+
