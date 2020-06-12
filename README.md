@@ -35,16 +35,37 @@
 
 ## Usage
 
+Start by creating some musicians:
+```
+musician4 = Guitarist('guitar', 'Sweet child of mine')
+musician5 = Drummer('Drum', 'November Rain')
+musician6 = Bassist('Bass', 'Paradise City')
+```
 
+Then you can create a Band, passing the band name as a string and the musicians as a list:
+```
+guns_n_roses= Band('Guns n Roses', [musician4, musician5, musician6])
+```
+
+Then do this to see the solos of each Musician:
+
+```
+guns_n_roses.play_solos()
+```
+
+returns:
+Sweet child of mine
+November Rain
+Paradise City
 
 ## Challenges
 
-- 
+It was very difficult to understand the requirenments for this lab. I was not sure how to start or what the end result should look like. With Roger's and Merry's help, I was able to create Musicians and create a Band wth them.
 
 
 ## References
 
-- 
+- https://www.youtube.com/watch?v=ZDa-Z5JzLYM
 
 
 ## Lab04 - Classes and Fixtures
